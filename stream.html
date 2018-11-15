@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Stream</title>
+<link href="format.css" rel="stylesheet" type="text/css">
+<script>
+	let visuals;
+	let visualIndex;
+	window.addEventListener("load", function(){
+		visuals=document.querySelectorAll("header>.visual");
+		visualIndex=0;
+		let header=document.querySelector("header");
+		header.addEventListener("click", nextVisual)
+	});
+	function nextVisual(){
+		visuals[visualIndex].classList.remove("visual-slide-in");
+		visuals[visualIndex].classList.add("visual-slide-out");
+		visualIndex=(visualIndex+1)%visuals.length;
+		visuals[visualIndex].classList.remove("visual-slide-out");
+		visuals[visualIndex].classList.add("visual-slide-in");
+	}
+	</script>
+</head>
+<body>
+	<header>
+		<div class="visual"></div>
+		<div class="visual"></div>
+		<div class="visual"></div>
+	</header>
+	<div class="main">
+		<div class="left">
+			<div class="box">
+					<div style="color:white;text-align: center;font-family:微軟正黑體;line-height: 120px;font-size: 30px">
+					<a href="index.html">
+						Home
+					</a>
+				</div>
+			</div>	
+			<div class="box">
+				<div style="color:white;text-align: center;font-family:微軟正黑體;line-height: 120px;font-size: 30px">
+					<a href="game.html">
+						Game
+					</a>
+				</div>
+			</div>
+			<div class="box">
+				<div style="color:white;text-align: center;font-family:微軟正黑體;line-height: 120px;font-size: 30px">
+					<a href="pc.html">
+						PC
+					</a>
+				</div>
+			</div>
+			<div class="box">
+				<div style="color:white;text-align: center;font-family:微軟正黑體;line-height: 120px;font-size: 30px">
+					<a href="stream.html">
+						Stream
+					</a>
+				</div>
+			</div>
+			<div class="box">
+				<div style="color:white;text-align: center;font-family:微軟正黑體;line-height: 120px;font-size: 30px">
+					<a href="me.html">
+						Me
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="right">
+			<div class="borderleft1">
+					<video width="700" height="400" controls>
+							<source src="a.mp4" type="video/mp4" />
+					</video>
+					<a href="https://www.twitch.tv/willyininder" target="_blank"style="text-decoration:none;color:white;font-family:微軟正黑體;font-size:50px">
+						<br>My Twitch Channels<br>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

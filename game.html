@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Game</title>
+<link href="format.css" rel="stylesheet" type="text/css">
+<script>
+	let visuals;
+	let visualIndex;
+	window.addEventListener("load", function(){
+		visuals=document.querySelectorAll("header>.visual");
+		visualIndex=0;
+		let header=document.querySelector("header");
+		header.addEventListener("click", nextVisual)
+	});
+	function nextVisual(){
+		visuals[visualIndex].classList.remove("visual-slide-in");
+		visuals[visualIndex].classList.add("visual-slide-out");
+		visualIndex=(visualIndex+1)%visuals.length;
+		visuals[visualIndex].classList.remove("visual-slide-out");
+		visuals[visualIndex].classList.add("visual-slide-in");
+	}
+	</script>
+</head>
+<body>
+	<header>
+		<div class="visual"></div>
+		<div class="visual"></div>
+		<div class="visual"></div>
+	</header>
+	<div class="main">
+		<div class="left">
+			<div class="box">
+					<div style="color:white;text-align: center;font-family:微軟正黑體;line-height: 120px;font-size: 30px">
+					<a href="index.html">
+						Home
+					</a>
+				</div>
+			</div>	
+			<div class="box">
+				<div style="color:white;text-align: center;font-family:微軟正黑體;line-height: 120px;font-size: 30px">
+					<a href="game.html">
+						Game
+					</a>
+				</div>
+			</div>
+			<div class="box">
+				<div style="color:white;text-align: center;font-family:微軟正黑體;line-height: 120px;font-size: 30px">
+					<a href="pc.html">
+						PC
+					</a>
+				</div>
+			</div>
+			<div class="box">
+				<div style="color:white;text-align: center;font-family:微軟正黑體;line-height: 120px;font-size: 30px">
+					<a href="stream.html">
+						Stream
+					</a>
+				</div>
+			</div>
+			<div class="box">
+				<div style="color:white;text-align: center;font-family:微軟正黑體;line-height: 120px;font-size: 30px">
+					<a href="me.html">
+						Me
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="right">
+			<div class="borderleft">
+				<a href="https://www.twitch.tv/directory/game/League%20of%20Legends">
+				<img src="3.jpg" width="320px" height="240px" style="border:10px white solid">
+				<span class="l">
+					<a href="https://www.twitch.tv/directory/game/Overwatch">
+					<img src="4.jpg" width="320px" height="240px" style="border:10px white solid">
+				</span>
+				<span class="l">				
+					<a href="https://www.twitch.tv/directory/game/Hearthstone">
+					<img src="5.jpg" width="320px" height="240px" style="border:10px white solid">
+				</span>
+		</div>
+		<div class="borderleft">
+				<a href="https://www.twitch.tv/directory/game/PLAYERUNKNOWN'S%20BATTLEGROUNDS">		
+				<img src="6.jpg" width="320px" height="240px" style="border:10px white solid">
+				<span class="l">
+					<a href="https://www.twitch.tv/directory/game/Fortnite">
+					<img src="7.jpg" width="320px" height="240px" style="border:10px white solid">
+				</span>
+				<span class="l">
+					<a href="https://www.twitch.tv/directory/game/Counter-Strike%3A%20Global%20Offensive">
+					<img src="8.jpg" width="320px" height="240px" style="border:10px white solid">
+				</span>
+		</div>
+		</div>
+	</div>
+</body>
+</html>

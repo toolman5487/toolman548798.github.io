@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>PC</title>
+<link href="format.css" rel="stylesheet" type="text/css">
+<script>
+	let visuals;
+	let visualIndex;
+	window.addEventListener("load", function(){
+		visuals=document.querySelectorAll("header>.visual");
+		visualIndex=0;
+		let header=document.querySelector("header");
+		header.addEventListener("click", nextVisual)
+	});
+	function nextVisual(){
+		visuals[visualIndex].classList.remove("visual-slide-in");
+		visuals[visualIndex].classList.add("visual-slide-out");
+		visualIndex=(visualIndex+1)%visuals.length;
+		visuals[visualIndex].classList.remove("visual-slide-out");
+		visuals[visualIndex].classList.add("visual-slide-in");
+	}
+	</script>
+</head>
+<body>
+	<header>
+		<div class="visual"></div>
+		<div class="visual"></div>
+		<div class="visual"></div>
+	</header>
+	<div class="main">
+		<div class="left">
+			<div class="box">
+					<div style="color:white;text-align: center;font-family:微軟正黑體;line-height: 120px;font-size: 30px">
+					<a href="index.html">
+						Home
+					</a>
+				</div>
+			</div>	
+			<div class="box">
+				<div style="color:white;text-align: center;font-family:微軟正黑體;line-height: 120px;font-size: 30px">
+					<a href="game.html">
+						Game
+					</a>
+				</div>
+			</div>
+			<div class="box">
+				<div style="color:white;text-align: center;font-family:微軟正黑體;line-height: 120px;font-size: 30px">
+					<a href="pc.html">
+						PC
+					</a>
+				</div>
+			</div>
+			<div class="box">
+				<div style="color:white;text-align: center;font-family:微軟正黑體;line-height: 120px;font-size: 30px">
+					<a href="stream.html">
+						Stream
+					</a>
+				</div>
+			</div>
+			<div class="box">
+				<div style="color:white;text-align: center;font-family:微軟正黑體;line-height: 120px;font-size: 30px">
+					<a href="me.html">
+						Me
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="right">
+			<div class="borderleft">
+				<a href="https://ecshweb.pchome.com.tw/search/v3.3/?q=i7%208700k&scope=all" target="_blank" style="text-decoration:none;color:white;font-family:微軟正黑體;font-size:50px">
+					處理器:i7-8700K<br>
+				</a>
+				<a href="https://ecshweb.pchome.com.tw/search/v3.3/?q=z370&scope=all" target="_blank"style="text-decoration:none;color:white;font-family:微軟正黑體;font-size:50px">
+					主板:Z370<br>
+				</a>
+				<a href="https://ecshweb.pchome.com.tw/search/v3.3/?q=2080ti&scope=all" target="_blank"style="text-decoration:none;color:white;font-family:微軟正黑體;font-size:50px">
+					顯示卡:RTX 2080ti<br>
+				</a>
+				<a href="https://ecshweb.pchome.com.tw/search/v3.3/?q=ram&scope=all" target="_blank"style="text-decoration:none;color:white;font-family:微軟正黑體;font-size:50px">
+					內存:32G(16*2)<br>
+				</a>
+				<a href="https://ecshweb.pchome.com.tw/search/v3.3/?q=intel%20ssd&scope=all" target="_blank"style="text-decoration:none;color:white;font-family:微軟正黑體;font-size:50px">
+					硬碟:intel optane 128G<br>
+				</a>
+				<a href="https://24h.pchome.com.tw/prod/DSAZ1J-A9009FDCA" target="_blank"style="text-decoration:none;color:white;font-family:微軟正黑體;font-size:50px">
+					電源供應器:CORSAIR RM1000X 1000W<br>
+				</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
